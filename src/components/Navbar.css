@@ -1,0 +1,88 @@
+
+  .nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  
+  
+  /* ---------- HAMBURGUESA ---------- */
+  .nav-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+  }
+  
+  .bar {
+    width: 25px;
+    height: 3px;
+    background: #333;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+  }
+  
+  .nav-toggle.open .bar1 {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  
+  .nav-toggle.open .bar2 {
+    opacity: 0;
+  }
+  
+  .nav-toggle.open .bar3 {
+    transform: rotate(-45deg) translate(6px, -6px);
+  }
+  
+  /* ---------- MENÚ MÓVIL ---------- */
+  .mobile-menu {
+    position: fixed;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    display: none;
+    padding: 2rem 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+  }
+  
+  .mobile-menu.show {
+    display: flex;
+    animation: fadeIn 0.3s ease;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  
+
+  @media (max-width: 768px) {
+    .nav-list,
+    .nav-actions {
+      display: none;
+    }
+  
+    .nav-toggle {
+      display: flex;
+    }
+  }
+  
+  

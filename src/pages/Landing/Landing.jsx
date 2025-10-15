@@ -1,12 +1,29 @@
-import "./Landing.css"
+import React from "react";
+import WhyPhantas from "../../components/Landing/WhyPhantas";
+import PlansSection from "../../components/Landing/PlanSection";
+import Hero from "../../components/Landing/Hero";
+import AboutSection from "../../components/Landing/AboutSection";
 
-export default function Landing() {
-    return (
-      <section className="landing">
-        <h1>Bienvenido a Phantas AI</h1>
-        <p>Explora una experiencia inteligente y moderna.</p>
-        <a href="/register" className="btn">Comienza ahora</a>
+const Landing = () => {
+  return (
+    <div className="landing">
+      <section id="inicio">
+        <Hero />
       </section>
-    );
-  }
-  
+
+      <section id="sobre">
+        <AboutSection />
+      </section>
+
+      <section id="por-que">
+        <WhyPhantas />
+      </section>
+
+      <section id="planes">
+        <PlansSection />
+      </section>
+    </div>
+  );
+};
+
+export default Landing;
