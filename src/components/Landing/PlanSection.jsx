@@ -1,14 +1,12 @@
 import React from "react";
 import PlanCard from "./PlanCard";
-
+import { useNavigate } from "react-router-dom";
 const PlansSection = () => {
-  const handleFreeClick = () => {
-    console.log("Redirigir a registro gratuito");
-  };
+    const navigate = useNavigate();
+    const handleRegister = () => navigate("/register");
 
-  const handlePremiumClick = () => {
-    console.log("Redirigir a suscripción premium");
-  };
+
+
 
   const plans = [
     {
@@ -20,7 +18,7 @@ const PlansSection = () => {
         "Acceso a recursos introductorios (mini guías, tips literarios, ejemplos).",
       ],
       buttonText: "Comenzar gratis",
-      onButtonClick: handleFreeClick,
+      onButtonClick: handleRegister,
     },
     {
       title: "Plan Premium",
@@ -33,7 +31,7 @@ const PlansSection = () => {
       ],
       price: "USD $5/mes",
       buttonText: "Hazte Premium",
-      onButtonClick: handlePremiumClick,
+      onButtonClick: handleRegister,
     },
   ];
 

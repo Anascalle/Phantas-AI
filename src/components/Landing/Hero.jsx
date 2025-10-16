@@ -1,14 +1,11 @@
 import React from "react";
 import Button from "../Button";
+import { useNavigate } from "react-router-dom";
 
 const Hero = () => {
-  const handleLearnMore = () => {
-
-  };
-
-  const handleGetStarted = () => {
-
-  };
+    const navigate = useNavigate();
+    const handleRegister= () => navigate("/register");
+ 
 
   return (
     <section className="hero">
@@ -24,13 +21,8 @@ const Hero = () => {
           <div className="hero-buttons">
             <Button
               text="Explora tu primera mentoría gratuita"
-              onClick={handleGetStarted}
+              onClick={handleRegister}
               className="hero-btn hero-btn-primary"
-            />
-            <Button
-              text="Conoce cómo funciona"
-              onClick={handleLearnMore}
-              className="hero-btn hero-btn-secondary"
             />
           </div>
         </div>

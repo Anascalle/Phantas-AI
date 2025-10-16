@@ -68,8 +68,8 @@ const Nav = () => {
           <li><a href="#planes" onClick={() => setMenuOpen(false)}>Planes</a></li>
         </ul>
         <div className="mobile-actions">
-          <Button text="Registrarse" className="nav-btn nav-btn-register" />
-          <Button text="Iniciar sesión" className="nav-btn nav-btn-login" />
+          <Button text="Registrarse" onClick={handleRegister} className="nav-btn nav-btn-register" />
+          <Button text="Iniciar sesión" onClick={handleLogin} className="nav-btn nav-btn-login" />
         </div>
       </div>
     </nav>
